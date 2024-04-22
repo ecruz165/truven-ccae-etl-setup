@@ -1,0 +1,17 @@
+i want a bash script that supports a list-local, list-remote and clone command:
+- list-local command requires two arguments
+-- for example list 083
+-- the underlying command in script would depend on ls command
+-- for example: ls -lah /t/*083.sas7bdat
+- list-remote command requires two arguments
+-- for example list 083
+-- the underlying command in script would depend on ls command
+-- for example: aws s3 ls s3:s3_bucket_nam/truven-files
+- clone command requires 3 arguments 
+-- for example: clone 083 s3_buck_name
+-- the clone command check env for required aws credentials and will prompt user to enter if missing 
+-- if credentials exists user will be shown crednetials and asked if he will like to proceed or enter new crendentials and will export them to env
+-- Script should check for existing environment files and print them out and ask if user wants to process
+-- Script should show files that would be uploaded and ask user if they want to proceed
+-- the underlying command in script would depend on aws s3 cp command and use list to feed source files to aws s3 cp
+-- for exmaple: ls -lah /t/*083.sas7bdat | xargs -I {} aws s3 cp {} s3://s3_bucket_name/truven-files

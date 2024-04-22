@@ -2,10 +2,18 @@
 This repo automates the preparatory steps to set up and run the ETL processing of the CCAE files using the  [ETL-LambdaBuilder Project](https://github.com/OHDSI/ETL-LambdaBuilder) maintained by [OHDSI](https://www.ohdsi.org/). This setup uses Gradle, a popular automation tool for multi-language software development. Gradle controls the development process from compilation and packaging to testing, deployment, and publishing.
 
 ##
-### Clone this project
+## Clone this project
 Be aware that this project has the [ETL-LambdaBuilder Project](https://github.com/OHDSI/ETL-LambdaBuilder) as a submodule so be aware and clone project the following way:
 ``` sh
 git clone --recurse-submodules https://github.com/ecruz165/truven-ccae-etl-setup.git
 ```
-
+ if the repository was already cloned without this option,  initialize and update the submodules manually:
+ ``` sh
+git submodule update --init --recursive
+ ```
+## Prerequisites 
+- Windows OS on Intel Chipset
+- Dotnet 8
+- Java 21
+- Python 11
 
