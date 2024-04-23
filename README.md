@@ -33,11 +33,13 @@ git submodule update --init --recursive
     -  deploy Merge Lambda
     -  Create Redshift schema and tables for source data ???? (need clarity that this is needed)
     -  Create Redshift schema and tables for vocab data ???? (need clarity that this is needed)
- -  Configure AppSettings Files (1 day)
+ -  Configure AppSettings Files (1-3 days) **<-current status**
  -  Perform Test Run (2-4 days)
- -  Validate Test Run Results (2-4 days)
+ -  Migrate, Load and Validate Test Run Results (2-4 days)
  -  Perform Incremental Test RUn (2-4 days)
- -  Validate Test RUn  (1-2)
+ -  Migrate, Load and Validate Test RUn  (2-3)
  -  Prep for Full Run (1 day)
  -  Run Full Test (2-3 weeks) 
+ -  Migrate Load, and Validate result data to Azure(2-5 days: over ~152 million records)
+ -  Proces CDM data for Atlas use.(1 day)
   
