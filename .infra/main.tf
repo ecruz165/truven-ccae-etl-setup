@@ -7,15 +7,12 @@ terraform {
   }
 }
 
-
 provider "aws" {
-  
-  region     = var.region
+  region     = "us-east-1"
   profile = "truven"
   default_tags {
     tags = {
-
-      Owner   = "HardikPatel"
+      Owner   = "EdwinCruz"
       Project = "RedshiftDemo"
     }
   }

@@ -1,0 +1,46 @@
+installed windows
+installed display link driver
+installed mouse + keyword
+installed logiOptions+
+installed windows terminal
+install gitbash
+configure gitbash
+
+install chrome
+
+install sdkman
+
+install java 8 -17
+install maven
+isntall gradle
+
+Configure Windows terminal to open terminals as 
+
+IN POWERSHELL
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+INSTALL CHOCOLATELY(HOMEBREW for windows)
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+IN BASH AS ADMINISTRATOR
+curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
+curl -L -o /usr/bin/readstat.zip https://github.com/curtisalexander/readstat-rs/releases/download/v0.12.2/readstat-v0.12.2-x86_64-pc-windows-msvc.zip
+
+
+install sas studio
+install visual studio professional
+installed dotnet 2.1.801choco 
+
+
+install MS Teams
+isntall zoom
+install Cisco anywhere
+Added CCAE mapped drive
+
+
+CHOCOLATELY INSTALLS
+choco install vscode
+- in vs code setup launch of vscode from cli code . 
+- in vscode default bash as terminal
+choco install docker
+choco install docker-compose
+choco install docker-desktop

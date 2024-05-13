@@ -1,0 +1,52 @@
+[
+    {
+        "name": "make",
+        "version": "4.4.1",
+        "packageManager": [
+            {
+                "windows": "Chocolatey"
+            }
+        ]
+    },
+    {
+        "name": "postgresql",
+        "version": "16 1.0",
+        "packageManager": [
+            {
+                "windows": "Chocolatey"
+            }
+        ]
+    },
+    {
+        "name": "terraform",
+        "version": "1.7.0",
+        "packageManager": [
+            {
+                "windows": "Chocolatey"
+            }
+        ]
+    },
+    {
+        "name": "pyenv-win",
+        "version": "3.1.1",
+        "packageManager": [
+            {
+                "windows": "Chocolatey"
+            }
+        ],
+        "versions": [{
+            "sub-package": "python3",
+            "version": "3.11.0b4"
+            }
+        ]
+    },
+    {
+        "name": "java",
+        "version": "21",
+        "packageManager": [
+            {
+                "windows": "sdkman"
+            }
+        ]
+    }
+]

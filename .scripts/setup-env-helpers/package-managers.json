@@ -1,0 +1,109 @@
+{
+    "packageManagers": {
+        "windows": [
+            {
+                "check_installed_command": "choco list",
+                "install_command": "choco install",
+                "check_pm_installed": "choco --version",
+                "install_pm_command": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"            
+            },
+            {
+                "name": "Scoop",
+                "command": "scoop",
+                "check_installed_command": "scoop list"
+            },
+            {
+                "name": "Winget",
+                "command": "winget",
+                "check_installed_command": "winget list"
+            },
+            {
+                "name": "nvm-windows",
+                "command": "nvm",
+                "check_installed_command": "nvm list"
+            }
+        ],
+        "macOS": [
+            {
+                "name": "Homebrew",
+                "command": "brew",
+                "check_installed_command": "brew --version",
+                "install_command": "brew install",
+                "upgrade_command": "brew upgrade",
+                "check_pm_installed": "which brew",
+                "install_pm_command": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+            },
+            {
+                "name": "SDKMAN!",
+                "command": "sdk",
+                "check_installed_command": "sdk list",
+                "install_command": "sdk install",
+                "upgrade_command": "sdk upgrade",
+                "check_pm_installed": "sdk version",
+                "install_pm_command": "curl -s \"https://get.sdkman.io\" | bash"
+            },
+            {
+                "name": "MacPorts",
+                "command": "port",
+                "check_installed_command": "port installed"
+            },
+            {
+                "name": "Fink",
+                "command": "fink",
+                "check_installed_command": "fink list --installed"
+            },
+            {
+                "name": "nvm",
+                "command": "nvm",                
+                "check_installed_command": "nvm list"
+            }
+        ],
+        "linux": [
+            {
+                "name": "APT",
+                "command": "apt",
+                "check_installed_command": "dpkg -l"
+            },
+            {
+                "name": "dpkg",
+                "command": "dpkg",
+                "check_installed_command": "dpkg -l"
+            },
+            {
+                "name": "YUM",
+                "command": "yum",
+                "check_installed_command": "yum list installed"
+            },
+            {
+                "name": "DNF",
+                "command": "dnf",
+                "check_installed_command": "dnf list installed"
+            },
+            {
+                "name": "rpm",
+                "command": "rpm",
+                "check_installed_command": "rpm -qa"
+            },
+            {
+                "name": "Pacman",
+                "command": "pacman",
+                "check_installed_command": "pacman -Q"
+            },
+            {
+                "name": "Zypper",
+                "command": "zypper",
+                "check_installed_command": "zypper se --installed-only"
+            },
+            {
+                "name": "Portage",
+                "command": "emerge",
+                "check_installed_command": "equery list --installed"
+            },
+            {
+                "name": "nvm",
+                "command": "nvm",
+                "check_installed_command": "nvm list"
+            }
+        ]
+    }
+}

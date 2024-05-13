@@ -1,5 +1,5 @@
 # Setting up ETL of IBM Truven CCAE Files to CDM
-This repo aims to streamline the preeffort to run the steps to set up and run the ETL processing of the CCAE files using the  [ETL-LambdaBuilder Project](https://github.com/OHDSI/ETL-LambdaBuilder) maintained by [OHDSI](https://www.ohdsi.org/). This setup uses Gradle, a popular automation tool for multi-language software development. Gradle controls the development process from compilation and packaging to testing, deployment, and publishing.
+This repo aims to streamline the setup effort to run the ETL processing of the CCAE files using the  [ETL-LambdaBuilder Project](https://github.com/OHDSI/ETL-LambdaBuilder) maintained by [OHDSI](https://www.ohdsi.org/). This setup uses Gradle, a popular automation tool for multi-language software development. Gradle controls the development process from compilation and packaging to testing, deployment, and publishing.
 
 ##
 ## Clone this project
@@ -31,8 +31,8 @@ git submodule update --init --recursive
     -  create buckets
     -  deploy CdmBuilkderLambda
     -  deploy Merge Lambda
-    -  Create Redshift schema and tables for source data ???? (need clarity that this is needed)
-    -  Create Redshift schema and tables for vocab data ???? (need clarity that this is needed)
+    -  Create Redshift schema and tables for source data 
+    -  Create Redshift schema and tables for vocab data 
  -  Configure AppSettings Files (1-3 days) **<-current status**
  -  Perform Test Run (2-4 days)
  -  Migrate, Load and Validate Test Run Results (2-4 days)
@@ -42,4 +42,5 @@ git submodule update --init --recursive
  -  Run Full Test (2-3 weeks) 
  -  Migrate Load, and Validate result data to Azure(2-5 days: over ~152 million records)
  -  Proces CDM data for Atlas use.(1 day)
+
   

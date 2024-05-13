@@ -1,8 +1,0 @@
-region="ap-south-1"
-cidr_block="10.0.0.0/16"
-environment="dev"
-username="myuser"
-cluster_identifier="mydemocluster"
-cluster_type="single-node"
-database_name="mydb"
-nodetype="dc2.large"

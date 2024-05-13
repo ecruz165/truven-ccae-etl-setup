@@ -11,4 +11,9 @@ build
 **/.terraform.lock.hcl
 **/terraform.tfstate
 **/terraform.tfstate.backup
+vocab-files
 volume
+
+.infra/terraform.tfvars
+
+truven-project.txt
