@@ -11,5 +11,12 @@ WEEK ENDING May 11
 -  Investfinal issue taking longer - narrowed down to a need to escape quotes in file. Mchaine didnt have python and had issues installing pyenv. Settled for installing just the latest pyhthon.
 -  Finally escaped quotes
 -  next wil be Re-uploading  CONCEPT_SYNONYM.csv now and reattempting import.
-- uploaded change but same import error still persists.
-- 
+-  uploaded change but same import error still persists.
+WEEK ENDING MAY 18
+- GOAL OF WEEK is process some records to validate setup 
+   -- Experimenting with settings using assumptions of use
+   -- IMPORT issue ON CONCEPT_SYNONYM TBALE still pending but does not block testing setup Posting on OHDISI FORUM
+   -- create cleanup scripts for rerun(s)
+   -- review logging out;ut on cloudwatch
+
+ 
