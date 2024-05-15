@@ -12,6 +12,7 @@ build
 **/terraform.tfstate
 **/terraform.tfstate.backup
 vocab-files
+truven-files
 volume
 
 .infra/terraform.tfvars

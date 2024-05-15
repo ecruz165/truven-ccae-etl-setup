@@ -49,7 +49,7 @@ create-vocab-table:
 # IMPORT VOCAB DATA (NOT WORKING YET - Permission issue)
 # - imports into designated table the updated s3 stored csv file 
 import-vocab-data:
-	@echo "CREATING VOCAB TABLE AND IMPORTING DATA..."
+	@echo "IMPORTING VOCAB DATA..."
 	bash -c ".scripts/import-vocab-table.sh CONCEPT_ANCESTOR s3://cdm-builder-setup-files/vocab-files/CONCEPT_ANCESTOR.csv"
 	bash -c ".scripts/import-vocab-table.sh CONCEPT_CLASS  s3://cdm-builder-setup-files/vocab-files/CONCEPT_CLASS.csv"
 	bash -c ".scripts/import-vocab-table.sh CONCEPT_CPT4 s3://cdm-builder-setup-files/vocab-files/CONCEPT_CPT4.csv"
@@ -61,6 +61,7 @@ import-vocab-data:
 	bash -c ".scripts/import-vocab-table.sh DRUG_STRENGTH s3://cdm-builder-setup-files/vocab-files/DRUG_STRENGTH.csv"
 	bash -c ".scripts/import-vocab-table.sh RELATIONSHIP s3://cdm-builder-setup-files/vocab-files/RELATIONSHIP.csv"
 	bash -c ".scripts/import-vocab-table.sh VOCABULARY s3://cdm-builder-setup-files/vocab-files/VOCABULARY.csv"
+	@echo "IMPORTED VOCAB DATA"
 .PHONY: import-vocab-data
 
 
@@ -68,13 +69,7 @@ import-vocab-data:
 # - uploads csv file and places is provided s3 bucket in the folder specificed
 upload-truven-data:
 	@echo "UPLOADING TRUVEN DATA..."
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2017Q1.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2017Q2.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2017Q3.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2017Q4.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2018Q1.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2018Q2.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2018Q3.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2018Q4.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2019Q1.csv cdm-builder-setup-files /truven-files/CCAE"
-	bash -c ".scripts/upload-truven-file.sh ./truven-files/CCAE/CCAE_2019Q2.csv cdm-builder-setup-files /truven-files/CCAE"
+	bash -c ".scripts/upload-files-to-s3.sh ./truven-files/083 cdm-builder-setup-files /truven-files/083"
+#	bash -c ".scripts/upload-files-to-s3.sh ./truven-files/093 cdm-builder-setup-files /truven-files/093"
+	@echo "UPLOADED TRUVEN DATA"
+.PHONY: upload-truven-data
