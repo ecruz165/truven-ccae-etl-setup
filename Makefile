@@ -68,8 +68,34 @@ import-vocab-data:
 # UPLOAD TRUVEN DATA
 # - uploads csv file and places is provided s3 bucket in the folder specificed
 upload-truven-data:
+	NY
 	@echo "UPLOADING TRUVEN DATA..."
 	bash -c ".scripts/upload-files-to-s3.sh ./truven-files/083 cdm-builder-setup-files /truven-files/083"
 #	bash -c ".scripts/upload-files-to-s3.sh ./truven-files/093 cdm-builder-setup-files /truven-files/093"
 	@echo "UPLOADED TRUVEN DATA"
 .PHONY: upload-truven-data
+
+
+etl-build:
+	dotnet publish ./etl-lambdabuilder/sources/org.ohdsi.cdm.sln
+.PHONY: etl-build
+
+etl-start:
+	cd ./etl-lambdabuilder/sources/Presentation/org.ohdsi.cdm.presentation.etl2 && \
+	./bin/Release/net8.0-windows/org.ohdsi.cdm.presentation.etl.exe \
+	--skip_etl false \
+  	--skip_lookup false \
+  	--skip_chunk false \
+  	--resume false \
+  	--skip_build false \
+  	--skip_cdmsource false \
+  	--skip_vocabulary false \
+  	--skip_validation false \
+  	--skip_merge false \
+	--new true \
+	--vendor ccae \
+	-- batchSize 1000
+.PHONY: etl-start
+	
+
+
